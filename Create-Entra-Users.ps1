@@ -1,3 +1,5 @@
+#Connect-MgGraph -Scopes "User.ReadWrite.All"
+
 Import-Csv -Path "./users.csv" | ForEach-Object {
     $user = @{
         DisplayName = $_.DisplayName
